@@ -4,6 +4,7 @@
   const revealItems = document.querySelectorAll('.hero > .hero-inner > div, #about .pillar, #courses .course-card, #ventures .venture, #contact .channel-card, #contact .form-wrap');
   const ladder = document.querySelector('.ladder');
   const steps = document.querySelectorAll('.step');
+  const heroItems = document.querySelectorAll('.hero > .hero-inner > div');
 
   const syncLadderLine = () => {
     if (!ladder || !steps.length) return;
@@ -15,6 +16,7 @@
   window.addEventListener('resize', syncLadderLine);
 
   revealItems.forEach(item => item.setAttribute('data-reveal', ''));
+  heroItems.forEach(item => item.classList.add('is-visible'));
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealItems.forEach(item => item.classList.add('is-visible'));
