@@ -1,0 +1,67 @@
+/* ============================================================
+   04-SECTIONS.CSS
+   Hero, About (pillars), Framework (ladder), Courses, Ventures.
+   ============================================================ */
+
+/* Hero */
+.hero{
+  min-height:88vh; display:flex; align-items:center;
+  padding:3.5rem 1.4rem 3rem; position:relative;
+  background:transparent;
+}
+.hero-inner{max-width:1100px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr; gap:2.6rem; align-items:center;}
+@media(min-width:880px){ .hero-inner{grid-template-columns:1.1fr 0.9fr;} }
+.eyebrow{font-size:0.8rem; font-weight:700; color:var(--gold); margin-bottom:1rem; text-transform:uppercase; letter-spacing:0.06em;}
+.hero h1{font-family:'Space Grotesk'; font-weight:700; font-size:clamp(2.3rem,5.6vw,3.6rem); line-height:1.05;}
+.hero p.tag{font-size:1.05rem; color:var(--ink-soft); max-width:32rem; margin:1.2rem 0 2rem; line-height:1.7;}
+.cta-row{display:flex; gap:0.85rem; flex-wrap:wrap;}
+.hero-portrait{position:relative; max-width:360px; margin:0 auto;}
+.hero-portrait .ring{position:absolute; inset:10% 5% 4%; border-radius:50%; background:var(--grad); opacity:0.2; filter:blur(42px);}
+.hero-portrait .card{position:relative; overflow:visible; background:transparent; border:0; box-shadow:none; aspect-ratio:435/513;}
+.hero-portrait .card img{width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 24px 24px rgba(0,0,0,0.32)) contrast(1.03) saturate(0.98);}
+.stat-float{position:absolute; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:0.6rem 0.9rem; font-size:0.75rem; color:var(--ink-soft);}
+.stat-float b{display:block; font-family:'Space Grotesk'; font-size:1.05rem; color:var(--emerald);}
+.stat-1{top:6%; left:-12%;} .stat-2{bottom:6%; right:-10%;}
+@media(max-width:880px){ .stat-float{display:none;} }
+
+/* Pillars (about) */
+.pillars{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:760px){ .pillars{grid-template-columns:repeat(3,1fr);} }
+.pillar{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:1.7rem; display:flex; flex-direction:column; gap:0.7rem;}
+.pillar .dot{width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; font-size:1rem;}
+.pillar.gold .dot{background:rgba(255,184,77,0.16); color:var(--gold);}
+.pillar.emerald .dot{background:rgba(47,212,152,0.16); color:var(--emerald);}
+.pillar.violet .dot{background:rgba(139,108,247,0.18); color:var(--violet);}
+.pillar h3{font-family:'Space Grotesk'; font-size:1.1rem;}
+.pillar p{font-size:0.88rem; color:var(--ink-soft); line-height:1.65;}
+
+/* Step ladder (signature element) */
+.ladder{display:flex; flex-direction:column; gap:0; border-left:2px solid var(--line); margin-left:1rem;}
+.step{position:relative; padding:0 0 2.2rem 2.2rem;}
+.step:last-child{padding-bottom:0;}
+.step::before{
+  content:attr(data-n); position:absolute; left:-1.05rem; top:0;
+  width:2.1rem; height:2.1rem; border-radius:50%; background:var(--grad); color:#000;
+  display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; font-size:0.85rem;
+}
+.step h3{font-family:'Space Grotesk'; font-size:1.05rem; margin-bottom:0.3rem;}
+.step p{color:var(--ink-soft); font-size:0.88rem; line-height:1.6; max-width:34rem;}
+
+/* Courses */
+.course-grid{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:640px){ .course-grid{grid-template-columns:repeat(2,1fr);} }
+@media(min-width:980px){ .course-grid{grid-template-columns:repeat(3,1fr);} }
+.course-card{background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden; display:flex; flex-direction:column;}
+.course-thumb{aspect-ratio:1/1; background:var(--card-hi); display:flex; align-items:center; justify-content:center; padding:1.2rem;}
+.course-thumb img{width:100%; height:100%; object-fit:contain;}
+.course-info{padding:1rem 1.1rem 1.3rem;}
+.course-info h3{font-family:'Space Grotesk'; font-size:1rem; margin-bottom:0.35rem;}
+.course-info p{font-size:0.82rem; color:var(--ink-soft); line-height:1.55;}
+
+/* Ventures */
+.venture-strip{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;}
+@media(min-width:700px){ .venture-strip{grid-template-columns:repeat(3,1fr);} }
+@media(min-width:980px){ .venture-strip{grid-template-columns:repeat(6,1fr);} }
+.venture{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; text-align:center;}
+.venture img{width:100%; height:100%; min-height:160px; object-fit:contain; background:var(--card-hi); padding:1rem; display:block;}
+.venture span{display:block; padding:0.8rem 0.6rem 0.95rem; font-size:0.72rem; color:var(--ink-soft); line-height:1.4;}

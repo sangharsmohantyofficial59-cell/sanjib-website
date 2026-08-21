@@ -1,0 +1,42 @@
+/* Motion layer: entrance reveals, counters, hover states, and framework progress. */
+
+[data-reveal]{opacity:0; transform:translateY(24px); transition:opacity 700ms ease, transform 700ms ease;}
+[data-reveal].is-visible{opacity:1; transform:none;}
+.hero [data-reveal]{transition-duration:850ms;}
+.hero [data-reveal]:nth-child(2){transition-delay:140ms;}
+
+.hero-portrait .card img{transition:transform 700ms cubic-bezier(.2,.75,.25,1), filter 700ms ease;}
+.hero-portrait:hover .card img{transform:translateY(-6px) scale(1.025); filter:drop-shadow(0 30px 28px rgba(0,0,0,0.38)) contrast(1.03) saturate(1.02);}
+.hero-portrait .ring{animation:heroGlow 7s ease-in-out infinite alternate;}
+.stat-float{transition:transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease; animation:badgeFloat 5s ease-in-out infinite;}
+.stat-2{animation-delay:-2.2s;}
+.stat-float:hover{transform:translateY(-4px); border-color:var(--gold); box-shadow:0 12px 30px rgba(0,0,0,0.2);}
+
+.course-card,.venture{transition:transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;}
+.course-card:hover,.venture:hover{transform:translateY(-6px); border-color:rgba(255,184,77,0.5); box-shadow:0 16px 32px rgba(0,0,0,0.22);}
+.course-thumb img,.venture img{transition:transform 450ms cubic-bezier(.2,.75,.25,1), filter 450ms ease;}
+.course-card:hover .course-thumb img,.venture:hover img{transform:scale(1.045); filter:saturate(1.08);}
+.venture:hover span{color:var(--ink);}
+
+.step{opacity:0; transform:translateX(-18px); transition:opacity 650ms ease, transform 650ms ease;}
+.step.is-visible{opacity:1; transform:none;}
+.step::before{transition:box-shadow 300ms ease, transform 300ms ease;}
+.step.is-visible::before{box-shadow:0 0 0 5px rgba(47,212,152,0.1);}
+.step:hover::before{transform:scale(1.08); box-shadow:0 0 0 7px rgba(255,184,77,0.12);}
+
+.ladder{position:relative;}
+.ladder::after{content:""; position:absolute; left:-2px; top:0; width:2px; height:0; background:var(--emerald); opacity:0.7; transition:height 1.2s ease; pointer-events:none;}
+.ladder.is-visible::after{height:100%;}
+
+.form-note.is-sending::after{content:""; display:inline-block; width:1em; animation:loadingDots 1.2s steps(4,end) infinite;}
+
+@keyframes heroGlow{from{transform:scale(.94); opacity:.15;}to{transform:scale(1.04); opacity:.28;}}
+@keyframes badgeFloat{0%,100%{translate:0 0;}50%{translate:0 -5px;}}
+@keyframes loadingDots{0%{content:"";}25%{content:".";}50%{content:"..";}75%,100%{content:"...";}}
+
+@media(prefers-reduced-motion:reduce){
+  [data-reveal],.step{opacity:1; transform:none; transition:none;}
+  .hero-portrait .ring,.stat-float{animation:none;}
+  .hero-portrait:hover .card img,.course-card:hover .course-thumb img,.venture:hover img{transform:none;}
+  .ladder::after{height:100%; transition:none;}
+}

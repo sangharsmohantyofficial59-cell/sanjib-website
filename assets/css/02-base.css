@@ -1,0 +1,43 @@
+/* ============================================================
+   02-BASE.CSS
+   Reset, typography, global elements, buttons, accessibility.
+   You shouldn't need to edit this often.
+   ============================================================ */
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif; font-weight:400;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(255,184,77,0.12), transparent 30rem),
+    radial-gradient(circle at 5% 34%, rgba(139,108,247,0.14), transparent 34rem),
+    var(--bg);
+}
+a{color:inherit; text-decoration:none;}
+.display{font-family:'Space Grotesk',sans-serif;}
+.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+img{max-width:100%; display:block;}
+
+.skip-link{
+  position:absolute; left:1rem; top:-60px; z-index:100;
+  background:var(--emerald); color:#04140D; font-weight:700; font-size:0.85rem;
+  padding:0.7rem 1.1rem; border-radius:8px; transition:top .15s ease;
+}
+.skip-link:focus{top:1rem;}
+
+.btn{padding:0.9rem 1.6rem; font-size:0.86rem; font-weight:700; border-radius:999px; cursor:pointer; border:1px solid transparent; font-family:'Plus Jakarta Sans';}
+.btn-primary{background:var(--grad); color:#000;}
+.btn-primary:hover{filter:brightness(1.08);}
+.btn-outline{border-color:var(--line); color:var(--ink); background:transparent;}
+.btn-outline:hover{border-color:var(--gold); color:var(--gold);}
+
+section{padding:5rem 1.4rem;}
+.inner{max-width:1100px; margin:0 auto;}
+.head{margin-bottom:2.4rem;}
+.head h2{font-family:'Space Grotesk'; font-weight:700; font-size:clamp(1.7rem,4vw,2.3rem);}
+.head p{color:var(--ink-soft); max-width:36rem; margin-top:0.6rem; line-height:1.6;}
+
+:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+@media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }

@@ -1,0 +1,59 @@
+/* ============================================================
+   01-THEME.CSS
+   ------------------------------------------------------------
+   THIS IS THE ONLY FILE YOU NEED TO TOUCH FOR A WEEKLY REFRESH.
+   Change the colors below and the ENTIRE site updates —
+   buttons, gradient text, step numbers, hover states, stat
+   badges, focus outline — all of it pulls from these variables.
+
+   How to use it weekly:
+   1. Pick 3 accent colors (gold/emerald/violet slots below,
+      or rename them if you like a different palette).
+   2. Save. Refresh the site. Done — no other file needs editing.
+   3. Keep a few palettes saved as comments at the bottom of this
+      file so you can copy-paste a new "week" in seconds.
+   ============================================================ */
+
+:root{
+  /* Background layers */
+  --bg:#0A0F1D;
+  --bg2:#0F1626;
+  --card:#131B2E;
+  --card-hi:#1A2439;
+
+  /* Text */
+  --ink:#F4F6FB;
+  --ink-soft:#93A0BC;
+
+  /* Accent colors — the 3 colors that define "this week's look" */
+  --gold:#FFB84D;
+  --emerald:#2FD498;
+  --violet:#8B6CF7;
+
+  /* Hairline borders */
+  --line:rgba(244,246,251,0.09);
+
+  /* Signature gradient — built from the 3 accents above */
+  --grad: linear-gradient(120deg, var(--gold) 0%, var(--emerald) 52%, var(--violet) 100%);
+}
+
+/* ------------------------------------------------------------
+   SAVED PALETTES — copy any block above into :root{} to swap looks.
+   ------------------------------------------------------------
+
+   -- Week option: "Ocean" --
+   --bg:#071019; --bg2:#0B1622; --card:#0F1D2B; --card-hi:#152838;
+   --gold:#4DC9FF; --emerald:#2FE0C9; --violet:#5B7FFF;
+
+   -- Week option: "Festive / Diwali" --
+   --bg:#120A05; --bg2:#1A0F08; --card:#241408; --card-hi:#2E1A0C;
+   --gold:#FFC94D; --emerald:#FF7A3D; --violet:#FF4D6D;
+
+   -- Week option: "Fresh / Spring" --
+   --bg:#0A1410; --bg2:#0E1B15; --card:#12241C; --card-hi:#1A3025;
+   --gold:#C8FF4D; --emerald:#4DFFB0; --violet:#4DE0FF;
+
+   -- Week option: "Royal / Premium" --
+   --bg:#0B0710; --bg2:#120A1A; --card:#1A1024; --card-hi:#241631;
+   --gold:#E5B24D; --emerald:#6C63FF; --violet:#C74DFF;
+   ------------------------------------------------------------ */

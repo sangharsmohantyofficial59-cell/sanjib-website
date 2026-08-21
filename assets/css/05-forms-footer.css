@@ -1,0 +1,33 @@
+/* ============================================================
+   05-FORMS-FOOTER.CSS
+   Contact form, channel cards (WhatsApp/LinkedIn/YouTube), footer.
+   ============================================================ */
+
+.form-wrap{background:var(--card); border:1px solid var(--line); border-radius:26px; padding:2rem 1.4rem;}
+@media(min-width:720px){ .form-wrap{padding:2.6rem;} }
+.form-grid{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:720px){ .form-grid{grid-template-columns:1fr 1fr;} }
+.field{display:flex; flex-direction:column; gap:0.4rem;}
+.field.full{grid-column:1/-1;}
+label{font-size:0.78rem; font-weight:600; color:var(--ink-soft);}
+input, select, textarea{
+  background:rgba(244,246,251,0.04); border:1px solid var(--line); border-radius:12px;
+  color:var(--ink); font-family:'Plus Jakarta Sans'; font-size:0.92rem; padding:0.75rem 0.9rem; outline:none;
+}
+input:focus, select:focus, textarea:focus{border-color:var(--gold);}
+textarea{resize:vertical; min-height:80px;}
+select option{background:var(--card);}
+.submit-row{margin-top:1.7rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;}
+.form-note{font-size:0.8rem; color:var(--ink-soft);}
+.form-note.err{color:#FF6B6B; font-weight:700;}
+
+/* Channels */
+.channels{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:720px){ .channels{grid-template-columns:repeat(3,1fr);} }
+.channel-card{background:var(--card); border:1px solid var(--line); border-radius:20px; padding:1.6rem; display:flex; flex-direction:column; gap:0.6rem;}
+.channel-card h3{font-family:'Space Grotesk'; font-size:1.05rem;}
+.channel-card p{font-size:0.85rem; color:var(--ink-soft); line-height:1.6;}
+.channel-card .go{margin-top:auto; font-size:0.8rem; font-weight:700; color:var(--gold);}
+
+footer{padding:2.6rem 1.4rem 2rem; text-align:center; border-top:1px solid var(--line);}
+footer .credits{font-family:'Space Grotesk'; font-size:0.78rem; color:var(--ink-soft);}

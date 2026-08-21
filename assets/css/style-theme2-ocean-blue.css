@@ -1,0 +1,189 @@
+/* ============================================================
+   SANJIB KUMAR MOHANTY — SITE STYLESHEET
+   THEME: Ocean Blue
+   ------------------------------------------------------------
+   HOW TO USE THIS FOR YOUR WEEKLY REFRESH:
+   1. Open assets/css/style.css in your website folder.
+   2. Select ALL the existing content and delete it.
+   3. Paste this entire file's content in its place.
+   4. Save. Refresh the site in your browser — new look, done.
+   No other file needs to change.
+   ============================================================ */
+
+:root{
+  --bg:#071019;
+  --bg2:#0B1622;
+  --card:#0F1D2B;
+  --card-hi:#152838;
+  --ink:#EAF4FB;
+  --ink-soft:#8FA9BC;
+  --gold:#4DC9FF;
+  --emerald:#2FE0C9;
+  --violet:#5B7FFF;
+  --line:rgba(234,244,251,0.09);
+  --grad: linear-gradient(120deg, var(--gold) 0%, var(--emerald) 52%, var(--violet) 100%);
+
+  --header-bg:rgba(7,16,25,0.88);
+  --input-bg:rgba(234,244,251,0.04);
+  --glow-1:rgba(77,201,255,0.18);
+  --glow-2:rgba(91,127,255,0.20);
+  --radius-card:16px;
+  --radius-btn:12px;
+  --btn-text:#04141F;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif; font-weight:400;
+  overflow-x:hidden;
+}
+a{color:inherit; text-decoration:none;}
+.display{font-family:'Space Grotesk',sans-serif;}
+.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+img{max-width:100%; display:block;}
+
+.skip-link{
+  position:absolute; left:1rem; top:-60px; z-index:100;
+  background:var(--emerald); color:#04141F; font-weight:700; font-size:0.85rem;
+  padding:0.7rem 1.1rem; border-radius:8px; transition:top .15s ease;
+}
+.skip-link:focus{top:1rem;}
+
+header{
+  position:sticky; top:0; z-index:50;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1.1rem 1.6rem;
+  background:var(--header-bg); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+header .brand{display:flex; align-items:center; gap:0.6rem;}
+header .brand img{height:34px; width:34px; border-radius:8px; object-fit:cover;}
+header .brand span{font-family:'Space Grotesk'; font-weight:700; font-size:1.05rem;}
+header nav{display:none;}
+@media(min-width:840px){ header nav{display:flex; gap:1.7rem;} }
+header nav a{font-size:0.82rem; font-weight:500; color:var(--ink-soft);}
+header nav a:hover{color:var(--gold);}
+.menu-toggle{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:8px; border:1px solid var(--line);
+  background:transparent; color:var(--ink); font-size:1.1rem; cursor:pointer;
+}
+@media(min-width:840px){ .menu-toggle{display:none;} }
+.mobile-nav{display:none; flex-direction:column; background:var(--card); border-bottom:1px solid var(--line); padding:0.6rem 1.6rem 1rem;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{padding:0.6rem 0; font-size:0.9rem; color:var(--ink-soft); border-bottom:1px solid var(--line);}
+.mobile-nav a:last-child{border-bottom:none;}
+@media(min-width:840px){ .mobile-nav{display:none !important;} }
+
+.btn{padding:0.9rem 1.6rem; font-size:0.86rem; font-weight:700; border-radius:var(--radius-btn); cursor:pointer; border:1px solid transparent; font-family:'Plus Jakarta Sans';}
+.btn-primary{background:var(--grad); color:#04141F;}
+.btn-primary:hover{filter:brightness(1.08);}
+.btn-outline{border-color:var(--line); color:var(--ink); background:transparent;}
+.btn-outline:hover{border-color:var(--gold); color:var(--gold);}
+
+/* Hero */
+.hero{
+  min-height:88vh; display:flex; align-items:center;
+  padding:3.5rem 1.4rem 3rem; position:relative;
+  background:
+    radial-gradient(circle at 88% 10%, var(--glow-1), transparent 42%),
+    radial-gradient(circle at 6% 92%, var(--glow-2), transparent 45%),
+    var(--bg);
+}
+.hero-inner{max-width:1100px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr; gap:2.6rem; align-items:center;}
+@media(min-width:880px){ .hero-inner{grid-template-columns:1.1fr 0.9fr;} }
+.eyebrow{font-size:0.8rem; font-weight:700; color:var(--gold); margin-bottom:1rem; text-transform:uppercase; letter-spacing:0.06em;}
+.hero h1{font-family:'Space Grotesk'; font-weight:700; font-size:clamp(2.3rem,5.6vw,3.6rem); line-height:1.05;}
+.hero p.tag{font-size:1.05rem; color:var(--ink-soft); max-width:32rem; margin:1.2rem 0 2rem; line-height:1.7;}
+.cta-row{display:flex; gap:0.85rem; flex-wrap:wrap;}
+.hero-portrait{position:relative; max-width:360px; margin:0 auto;}
+.hero-portrait .ring{position:absolute; inset:-12px; border-radius:26px; background:var(--grad); opacity:0.55; filter:blur(2px);}
+.hero-portrait .card{position:relative; border-radius:var(--radius-card); overflow:hidden; background:var(--card); border:1px solid var(--line); aspect-ratio:3/4;}
+.hero-portrait .card img{width:100%; height:100%; object-fit:cover;}
+.stat-float{position:absolute; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:0.6rem 0.9rem; font-size:0.75rem; color:var(--ink-soft);}
+.stat-float b{display:block; font-family:'Space Grotesk'; font-size:1.05rem; color:var(--emerald);}
+.stat-1{top:6%; left:-12%;} .stat-2{bottom:6%; right:-10%;}
+@media(max-width:880px){ .stat-float{display:none;} }
+
+section{padding:5rem 1.4rem;}
+.inner{max-width:1100px; margin:0 auto;}
+.head{margin-bottom:2.4rem;}
+.head h2{font-family:'Space Grotesk'; font-weight:700; font-size:clamp(1.7rem,4vw,2.3rem);}
+.head p{color:var(--ink-soft); max-width:36rem; margin-top:0.6rem; line-height:1.6;}
+
+/* Pillars (about) */
+.pillars{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:760px){ .pillars{grid-template-columns:repeat(3,1fr);} }
+.pillar{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-card); padding:1.7rem; display:flex; flex-direction:column; gap:0.7rem;}
+.pillar .dot{width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; font-size:1rem;}
+.pillar.gold .dot{background:rgba(255,184,77,0.16); color:var(--gold);}
+.pillar.emerald .dot{background:rgba(47,212,152,0.16); color:var(--emerald);}
+.pillar.violet .dot{background:rgba(139,108,247,0.18); color:var(--violet);}
+.pillar h3{font-family:'Space Grotesk'; font-size:1.1rem;}
+.pillar p{font-size:0.88rem; color:var(--ink-soft); line-height:1.65;}
+
+/* Step ladder (signature element) */
+.ladder{display:flex; flex-direction:column; gap:0; border-left:2px solid var(--line); margin-left:1rem;}
+.step{position:relative; padding:0 0 2.2rem 2.2rem;}
+.step:last-child{padding-bottom:0;}
+.step::before{
+  content:attr(data-n); position:absolute; left:-1.05rem; top:0;
+  width:2.1rem; height:2.1rem; border-radius:50%; background:var(--grad); color:#04141F;
+  display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; font-size:0.85rem;
+}
+.step h3{font-family:'Space Grotesk'; font-size:1.05rem; margin-bottom:0.3rem;}
+.step p{color:var(--ink-soft); font-size:0.88rem; line-height:1.6; max-width:34rem;}
+
+/* Courses */
+.course-grid{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:640px){ .course-grid{grid-template-columns:repeat(2,1fr);} }
+@media(min-width:980px){ .course-grid{grid-template-columns:repeat(3,1fr);} }
+.course-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-card); overflow:hidden; display:flex; flex-direction:column;}
+.course-thumb{aspect-ratio:1/1; background:var(--card-hi); display:flex; align-items:center; justify-content:center; padding:1.2rem;}
+.course-thumb img{width:100%; height:100%; object-fit:contain;}
+.course-info{padding:1rem 1.1rem 1.3rem;}
+.course-info h3{font-family:'Space Grotesk'; font-size:1rem; margin-bottom:0.35rem;}
+.course-info p{font-size:0.82rem; color:var(--ink-soft); line-height:1.55;}
+
+/* Ventures */
+.venture-strip{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;}
+@media(min-width:700px){ .venture-strip{grid-template-columns:repeat(3,1fr);} }
+@media(min-width:980px){ .venture-strip{grid-template-columns:repeat(6,1fr);} }
+.venture{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1.1rem 0.8rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:0.6rem;}
+.venture img{width:48px; height:48px; object-fit:contain;}
+.venture span{font-size:0.72rem; color:var(--ink-soft); line-height:1.4;}
+
+/* Contact form */
+.form-wrap{background:var(--card); border:1px solid var(--line); border-radius:26px; padding:2rem 1.4rem;}
+@media(min-width:720px){ .form-wrap{padding:2.6rem;} }
+.form-grid{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:720px){ .form-grid{grid-template-columns:1fr 1fr;} }
+.field{display:flex; flex-direction:column; gap:0.4rem;}
+.field.full{grid-column:1/-1;}
+label{font-size:0.78rem; font-weight:600; color:var(--ink-soft);}
+input, select, textarea{
+  background:var(--input-bg); border:1px solid var(--line); border-radius:12px;
+  color:var(--ink); font-family:'Plus Jakarta Sans'; font-size:0.92rem; padding:0.75rem 0.9rem; outline:none;
+}
+input:focus, select:focus, textarea:focus{border-color:var(--gold);}
+textarea{resize:vertical; min-height:80px;}
+select option{background:var(--card); color:var(--ink);}
+.submit-row{margin-top:1.7rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;}
+.form-note{font-size:0.8rem; color:var(--ink-soft);}
+.form-note.err{color:#FF6B6B; font-weight:700;}
+
+/* Channels */
+.channels{display:grid; grid-template-columns:1fr; gap:1.1rem;}
+@media(min-width:720px){ .channels{grid-template-columns:repeat(3,1fr);} }
+.channel-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-card); padding:1.6rem; display:flex; flex-direction:column; gap:0.6rem;}
+.channel-card h3{font-family:'Space Grotesk'; font-size:1.05rem;}
+.channel-card p{font-size:0.85rem; color:var(--ink-soft); line-height:1.6;}
+.channel-card .go{margin-top:auto; font-size:0.8rem; font-weight:700; color:var(--gold);}
+
+footer{padding:2.6rem 1.4rem 2rem; text-align:center; border-top:1px solid var(--line);}
+footer .credits{font-family:'Space Grotesk'; font-size:0.78rem; color:var(--ink-soft);}
+
+:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+@media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
