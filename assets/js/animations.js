@@ -1,7 +1,7 @@
 // Motion layer: viewport reveals, mission counter, and form loading state.
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealItems = document.querySelectorAll('.hero > .hero-inner > div, #about .pillar, #courses .course-card, #ventures .venture, #contact .channel-card, #contact .form-wrap');
+  const revealItems = document.querySelectorAll('.hero > .hero-inner > div, #about .pillar, #courses .course-card, #legacy-creator .legacy-card, #ventures .venture, #contact .channel-card, #contact .form-wrap');
   const ladder = document.querySelector('.ladder');
   const steps = document.querySelectorAll('.step');
   const heroItems = document.querySelectorAll('.hero > .hero-inner > div');
