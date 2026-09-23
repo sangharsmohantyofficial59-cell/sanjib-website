@@ -76,6 +76,11 @@ header nav a:hover{color:var(--gold);}
 .pillar.gold .dot{background:rgba(255,184,77,.16);color:var(--gold);}.pillar.emerald .dot{background:rgba(47,212,152,.16);color:var(--emerald);}.pillar.violet .dot{background:rgba(139,108,247,.18);color:var(--violet);}
 .pillar h3{font-family:'Space Grotesk';font-size:1.1rem;}.pillar p{font-size:.88rem;color:var(--ink-soft);line-height:1.65;}
 
+.about-story{max-width:760px;margin:2rem auto 0;padding:1.8rem 1.6rem;border:1px solid var(--line);border-radius:var(--radius-card,20px);background:var(--card);box-shadow:0 12px 28px rgba(0,0,0,.08);}
+.about-story p{font-size:1rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1rem;}
+.about-story p:last-child{margin-bottom:0;}
+.about-closing{font-family:'Space Grotesk';font-size:1.18rem;font-weight:700;color:var(--ink);letter-spacing:.01em;margin-top:1.4rem !important;}
+
 /* Framework */
 .ladder{display:flex;flex-direction:column;gap:0;border-left:2px solid transparent;margin-left:1rem;position:relative;}
 .step{position:relative;z-index:1;padding:0 0 2.2rem 2.2rem;}
