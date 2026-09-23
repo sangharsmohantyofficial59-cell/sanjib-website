@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sanjibmohanty.com/sitemap.xml
+Sitemap: https://sanjibmohanty.com/sitemap.xml
