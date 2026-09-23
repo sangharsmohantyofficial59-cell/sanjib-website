@@ -21,7 +21,7 @@ mobileNav.querySelectorAll('a').forEach(link => {
   2. Paste the deployment URL below, replacing the placeholder.
   Field names already match the script's doPost() and the Pipeline sheet columns.
 */
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzMtoS_6mAyYK00ZfR3xHgbEVQc9KK1XLV6JtmNWjDOhoH_gAUf_vELoOGCHmALIGja/exec"; // <-- REPLACE with your Apps Script deployment URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxSWlqStW-KtX8dAUKYBJ88Hxi1hE9-_m6fHLD24VIVr9miIUNLmgw0FbYmfDoc-Gfa/exec"; // <-- REPLACE with your Apps Script deployment URL
 
 const form = document.getElementById('leadForm');
 const statusEl = document.getElementById('formStatus');
