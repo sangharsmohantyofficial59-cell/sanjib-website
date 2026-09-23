@@ -76,10 +76,11 @@ header nav a:hover{color:var(--gold);}
 .pillar.gold .dot{background:rgba(255,184,77,.16);color:var(--gold);}.pillar.emerald .dot{background:rgba(47,212,152,.16);color:var(--emerald);}.pillar.violet .dot{background:rgba(139,108,247,.18);color:var(--violet);}
 .pillar h3{font-family:'Space Grotesk';font-size:1.1rem;}.pillar p{font-size:.88rem;color:var(--ink-soft);line-height:1.65;}
 
-.about-story{max-width:760px;margin:2rem auto 0;padding:1.2rem 1.3rem;display:flex;flex-direction:column;gap:.7rem;}
+.about-story{max-width:760px;margin:1.5rem auto 0;padding:1.2rem 1.3rem;display:flex;flex-direction:column;gap:.7rem;}
 .about-story p{font-size:1rem;line-height:1.7;color:var(--ink-soft);margin:0;}
 .about-keyline{padding-left:.85rem;border-left:3px solid var(--gold);font-weight:700;color:var(--ink);background:rgba(255,184,77,.05);}
 .about-closing{font-family:'Space Grotesk';font-size:1.12rem;font-weight:700;color:var(--ink);letter-spacing:.01em;margin-top:.3rem !important;}
+@media(max-width:760px){.about-story{padding:1rem .95rem;margin-top:1.25rem;}.about-story p{font-size:.95rem;line-height:1.65;}.about-closing{font-size:1.05rem;}}
 
 /* Framework */
 .ladder{display:flex;flex-direction:column;gap:0;border-left:2px solid transparent;margin-left:1rem;position:relative;}
