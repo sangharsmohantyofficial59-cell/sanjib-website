@@ -2,12 +2,11 @@
    SANJIB KUMAR MOHANTY — SITE STYLESHEET
    THEME: Signature Gold (Original)
    ------------------------------------------------------------
-   HOW TO USE THIS FOR YOUR WEEKLY REFRESH:
-   1. Open assets/css/style.css in your website folder.
-   2. Select ALL the existing content and delete it.
-   3. Paste this entire file's content in its place.
-   4. Save. Refresh the site in your browser — new look, done.
-   No other file needs to change.
+   MASTER THEME FILE
+   Use this as your single active theme file. To swap the look,
+   replace the content of this file with any alternate theme, or
+   keep multiple theme files and point the HTML link at the one
+   you want to use.
    ============================================================ */
 
 :root{
