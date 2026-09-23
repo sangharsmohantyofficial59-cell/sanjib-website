@@ -65,8 +65,8 @@ header nav a:hover{color:var(--gold);}
 .hero-portrait .card img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 24px 24px rgba(0,0,0,.32)) contrast(1.03) saturate(.98);}
 .stat-float{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.6rem .9rem;font-size:.75rem;color:var(--ink-soft);}
 .stat-float b{display:block;font-family:'Space Grotesk';font-size:1.05rem;color:var(--emerald);}
-.stat-1{top:6%;left:-12%;}.stat-2{bottom:6%;right:-10%;}
-@media(max-width:880px){.stat-float{display:none;}}
+.stat-1{top:6%;left:-12%;}.stat-2{bottom:6%;right:-10%;}.stat-3{top:6%;right:-12%;}
+@media(max-width:880px){.stat-float{padding:.5rem .7rem;font-size:.68rem;}.stat-1{top:2%;left:2%;}.stat-2{bottom:3%;right:2%;}.stat-3{top:2%;right:2%;}}
 
 /* About */
 .pillars{display:grid;grid-template-columns:1fr;gap:1.1rem;}
