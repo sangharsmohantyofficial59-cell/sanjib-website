@@ -56,7 +56,7 @@ function doPost(e) {
     const createdIST   = toIST(new Date());
 
     let row;
-    if (isGyanav) {
+    if (isGyanav) { 
       // Gyanavexim tab: Timestamp (IST), Name, Mobile, Email, Subject, Message
       row = [
         submittedIST,
